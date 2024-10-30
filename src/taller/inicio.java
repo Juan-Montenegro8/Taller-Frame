@@ -15,10 +15,10 @@ public class inicio extends javax.swing.JFrame {
 
         LBienvenido = new javax.swing.JLabel();
         LNombre = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        BReserva = new javax.swing.JButton();
         usuario = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        LUsuario = new javax.swing.JLabel();
+        LContraseña = new javax.swing.JLabel();
         contraseña = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -29,8 +29,8 @@ public class inicio extends javax.swing.JFrame {
         LNombre.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         LNombre.setText("MONT BLACK");
 
-        jButton1.setText("RESERVAS");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BReserva.setText("RESERVAS");
+        BReserva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
@@ -42,9 +42,9 @@ public class inicio extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Usuario:");
+        LUsuario.setText("Usuario:");
 
-        jLabel4.setText("Contraseña:");
+        LContraseña.setText("Contraseña:");
 
         contraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,10 +64,10 @@ public class inicio extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(118, 118, 118)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LNombre)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
+                            .addComponent(LUsuario)
+                            .addComponent(LContraseña)
                             .addComponent(usuario)
                             .addComponent(contraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))))
                 .addContainerGap(69, Short.MAX_VALUE))
@@ -80,15 +80,15 @@ public class inicio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(LNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(jLabel3)
+                .addComponent(LUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addComponent(LContraseña)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
@@ -148,11 +148,11 @@ public class inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField contraseña;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BReserva;
     private javax.swing.JLabel LBienvenido;
     private javax.swing.JLabel LNombre;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel LUsuario;
+    private javax.swing.JLabel LContraseña;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
