@@ -1,45 +1,41 @@
 package taller;
 import javax.swing.*;
 public class herencia extends reserva implements inter{
-    String contra,usu;
-    public herencia(String contra, String usu) {
+    String contraseña,usuario;
+    public herencia(String contraseña, String usuario) {
         super();
-        this.contra = contra;
-        this.usu = usu;
+        this.contraseña = contraseña;
+        this.usuario = usuario;
     }
     public String getContra() {
-        return contra;
+        return contraseña;
     }
 
-    public void setContra(String contra) {
-        this.contra = contra;
+    public void setContra(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public String getUsu() {
-        return usu;
+        return usuario;
     }
 
-    public void setUsu(String usu) {
-        this.usu = usu;
+    public void setUsu(String usuario) {
+        this.usuario = usuario;
     }
 
     @Override
     public void entrar() {
-        if((contra.equals("monte"))&&(usu.equals("juan"))){
+        if((contraseña.equals("monte"))&&(usuario.equals("juan"))){
         JOptionPane.showMessageDialog(null, "la contraseña es correcta");
-        jose op= new jose();
-        op.setVisible(true);
+        jose objeto= new jose();
+        objeto.setVisible(true);
         
         
         }else{
          JOptionPane.showMessageDialog(null, "Usuario o contraseña es incorrecta");
      }
     } 
-
-    
-
-    
-        }
+}
 
     
 
