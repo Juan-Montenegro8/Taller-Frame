@@ -98,9 +98,9 @@ public class inicio extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 //POLIMORFISMO
         String Contraseña = new String(contraseña.getPassword());
-        reserva o=new herencia(Contraseña,usuario.getText());
+        reserva objeto=new herencia(Contraseña,usuario.getText());
         
-        o.entrar();
+        objeto.entrar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraseñaActionPerformed
