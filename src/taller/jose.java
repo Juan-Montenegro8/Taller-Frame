@@ -22,7 +22,7 @@ public class jose extends javax.swing.JFrame {
     String hff="";
     String h="";
     String niNo="";
-    ArrayList<reserva> aa=new ArrayList <reserva>();
+    ArrayList<reserva> Arrayreserva=new ArrayList <reserva>();
     public jose() {
         initComponents();
         jTable1.addMouseListener(new MouseAdapter(){
@@ -473,7 +473,7 @@ public class jose extends javax.swing.JFrame {
                 person.getSelectedItem().toString(),Haita.getSelectedItem().toString(),
                 MesIngreso.getSelectedItem().toString(),MesSalida.getSelectedItem().toString(),
                 NumeroHabitacion.getText(), niNos.getText());
-        aa.add(o);
+        Arrayreserva.add(o);
         muestra();
         nombre.setText("");
         apeliido.setText("");
@@ -531,28 +531,28 @@ public class jose extends javax.swing.JFrame {
     }//GEN-LAST:event_DiaIngActionPerformed
 
     private void borrarlineaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarlineaActionPerformed
-        for(int i=0;i<aa.size();i++){
-            if(Nombre==aa.get(i).getNombre()){
-                aa.remove(i);
+        for(int i=0;i<Arrayreserva.size();i++){
+            if(Nombre==Arrayreserva.get(i).getNombre()){
+                Arrayreserva.remove(i);
             }
         }
-        String jj[][]=new String [aa.size()][10];
+        String matriz[][]=new String [Arrayreserva.size()][10];
         
-        for(int i =0;i<aa.size();i++){
-            jj[i][0]=aa.get(i).getNombre();
-            jj[i][1]=aa.get(i).getApellido();
-            jj[i][2]=aa.get(i).getIdetificacion();
-            jj[i][3]=aa.get(i).getIngreso();
-            jj[i][4]=aa.get(i).getMes1();
-            jj[i][5]=aa.get(i).getFin();
-            jj[i][6]=aa.get(i).getMes2();
-            jj[i][7]=aa.get(i).getHabi();
-            jj[i][8]=aa.get(i).getPerso();
-            jj[i][9]=aa.get(i).getNum();
-            jj[i][10]=aa.get(i).getNiNo();
+        for(int i =0;i<Arrayreserva.size();i++){
+            matriz[i][0]=Arrayreserva.get(i).getNombre();
+            matriz[i][1]=Arrayreserva.get(i).getApellido();
+            matriz[i][2]=Arrayreserva.get(i).getIdetificacion();
+            matriz[i][3]=Arrayreserva.get(i).getIngreso();
+            matriz[i][4]=Arrayreserva.get(i).getMes1();
+            matriz[i][5]=Arrayreserva.get(i).getFin();
+            matriz[i][6]=Arrayreserva.get(i).getMes2();
+            matriz[i][7]=Arrayreserva.get(i).getHabi();
+            matriz[i][8]=Arrayreserva.get(i).getPerso();
+            matriz[i][9]=Arrayreserva.get(i).getNum();
+            matriz[i][10]=Arrayreserva.get(i).getNiNo();
             }
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            jj,
+            matriz,
             new String [] {
                 "Nombre", "Apellido", "Identificacion", "Dia de ingreso", "mes de ingreso", "Dia de salida", "mes de salida", "Habitaciones", "Personas", "Num Hab.", "niNos"
             }
@@ -573,19 +573,19 @@ public class jose extends javax.swing.JFrame {
 
     private void porfinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_porfinActionPerformed
         
-        for(int i=0;i<aa.size();i++){
+        for(int i=0;i<Arrayreserva.size();i++){
             
-            if(LNumeroHabitacion.getText()==aa.get(i).getNum()){
-                aa.get(i).setNombre(noo.getText());
-                aa.get(i).setApellido(apeeeeeee.getText());
-                aa.get(i).setIdetificacion(ideeeeeee.getText());
-                aa.get(i).setIngreso(diaedi.getText());
-                aa.get(i).setMes1(MesEdi.getText());
-                aa.get(i).setFin(DiaFin.getText());
-                aa.get(i).setMes2(mesFin.getText());
-                aa.get(i).setHabi(Hb.getText());
-                aa.get(i).setPerso(Pb.getText());
-                aa.get(i).setNiNo(niNos.getText());
+            if(LNumeroHabitacion.getText()==Arrayreserva.get(i).getNum()){
+                Arrayreserva.get(i).setNombre(noo.getText());
+                Arrayreserva.get(i).setApellido(apeeeeeee.getText());
+                Arrayreserva.get(i).setIdetificacion(ideeeeeee.getText());
+                Arrayreserva.get(i).setIngreso(diaedi.getText());
+                Arrayreserva.get(i).setMes1(MesEdi.getText());
+                Arrayreserva.get(i).setFin(DiaFin.getText());
+                Arrayreserva.get(i).setMes2(mesFin.getText());
+                Arrayreserva.get(i).setHabi(Hb.getText());
+                Arrayreserva.get(i).setPerso(Pb.getText());
+                Arrayreserva.get(i).setNiNo(niNos.getText());
             }
             
             
@@ -602,23 +602,23 @@ public class jose extends javax.swing.JFrame {
         LNumeroHabitacion.setText("NumHabi");
         niNos.setText("");
         
-        String jj[][]=new String [aa.size()][10];
+        String matriz[][]=new String [Arrayreserva.size()][10];
         
-        for(int i =0;i<aa.size();i++){
-            jj[i][0]=aa.get(i).getNombre();
-            jj[i][1]=aa.get(i).getApellido();
-            jj[i][2]=aa.get(i).getIdetificacion();
-            jj[i][3]=aa.get(i).getIngreso();
-            jj[i][4]=aa.get(i).getMes1();
-            jj[i][5]=aa.get(i).getFin();
-            jj[i][6]=aa.get(i).getMes2();
-            jj[i][7]=aa.get(i).getHabi();
-            jj[i][8]=aa.get(i).getPerso();
-            jj[i][9]=aa.get(i).getNum();
-            jj[i][10]=aa.get(i).getNiNo();
+        for(int i =0;i<Arrayreserva.size();i++){
+            matriz[i][0]=Arrayreserva.get(i).getNombre();
+            matriz[i][1]=Arrayreserva.get(i).getApellido();
+            matriz[i][2]=Arrayreserva.get(i).getIdetificacion();
+            matriz[i][3]=Arrayreserva.get(i).getIngreso();
+            matriz[i][4]=Arrayreserva.get(i).getMes1();
+            matriz[i][5]=Arrayreserva.get(i).getFin();
+            matriz[i][6]=Arrayreserva.get(i).getMes2();
+            matriz[i][7]=Arrayreserva.get(i).getHabi();
+            matriz[i][8]=Arrayreserva.get(i).getPerso();
+            matriz[i][9]=Arrayreserva.get(i).getNum();
+            matriz[i][10]=Arrayreserva.get(i).getNiNo();
             }
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            jj,
+            matriz,
             new String [] {
                 "Nombre", "Apellido", "Identificacion", "Dia de ingreso", "mes de ingreso", "Dia de salida", "mes de salida", "Habitaciones", "Personas", "Num Hab.", "niNos"
             }
@@ -634,24 +634,24 @@ public class jose extends javax.swing.JFrame {
     }//GEN-LAST:event_niNosActionPerformed
 
     public void muestra(){
-    String jj[][]=new String [aa.size()][10];
+    String matriz[][]=new String [Arrayreserva.size()][10];
      
-        for(int i =0;i<aa.size();i++){
-            jj[i][0]=aa.get(i).getNombre();
-            jj[i][1]=aa.get(i).getApellido();
-            jj[i][2]=aa.get(i).getIdetificacion();
-            jj[i][3]=aa.get(i).getIngreso();
-            jj[i][4]=aa.get(i).getMes1();
-            jj[i][5]=aa.get(i).getFin();
-            jj[i][6]=aa.get(i).getMes2();
-            jj[i][7]=aa.get(i).getHabi();
-            jj[i][8]=aa.get(i).getPerso();
-            jj[i][9]=aa.get(i).getNum();
-            jj[i][10]=aa.get(i).getNiNo();
+        for(int i =0;i<Arrayreserva.size();i++){
+            matriz[i][0]=Arrayreserva.get(i).getNombre();
+            matriz[i][1]=Arrayreserva.get(i).getApellido();
+            matriz[i][2]=Arrayreserva.get(i).getIdetificacion();
+            matriz[i][3]=Arrayreserva.get(i).getIngreso();
+            matriz[i][4]=Arrayreserva.get(i).getMes1();
+            matriz[i][5]=Arrayreserva.get(i).getFin();
+            matriz[i][6]=Arrayreserva.get(i).getMes2();
+            matriz[i][7]=Arrayreserva.get(i).getHabi();
+            matriz[i][8]=Arrayreserva.get(i).getPerso();
+            matriz[i][9]=Arrayreserva.get(i).getNum();
+            matriz[i][10]=Arrayreserva.get(i).getNiNo();
             }
         
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            jj,
+            matriz,
             new String [] {
                 "Nombre", "Apellido", "Identificacion", "Dia de ingreso", "mes de ingreso", "Dia de salida", "mes de salida", "Habitaciones", "Personas", "Num Hab.", "niNos"
             }
@@ -665,7 +665,7 @@ public class jose extends javax.swing.JFrame {
         
         int num = Integer.parseInt(person.getSelectedItem().toString());
         total=(numero*100)+(num*50);
-        String jj="";
+        String jj=" ";
         jj= String.valueOf(total);
         totall.setText("$"+jj+".000");
     }
