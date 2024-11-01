@@ -11,9 +11,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class jose extends javax.swing.JFrame {
 
-    String nom="";
-    String ape="";
-    String iden="";
+    String Nombre="";
+    String Apellido="";
+    String Identificacion="";
     String dia="";
     String mes="";
     String mesff="";
@@ -30,9 +30,9 @@ public class jose extends javax.swing.JFrame {
             
             public void mouseClicked(MouseEvent e){
                 int i = jTable1.getSelectedRow();
-                nom=(jTable1.getValueAt(i, 0).toString());
-                ape=(jTable1.getValueAt(i, 1).toString());
-                iden=(jTable1.getValueAt(i, 2).toString());
+                Nombre=(jTable1.getValueAt(i, 0).toString());
+                Apellido=(jTable1.getValueAt(i, 1).toString());
+                Identificacion=(jTable1.getValueAt(i, 2).toString());
                 dia=(jTable1.getValueAt(i, 3).toString());
                 mes=(jTable1.getValueAt(i, 4).toString());
                 diaff=(jTable1.getValueAt(i, 5).toString());
@@ -57,23 +57,23 @@ public class jose extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        LDatos = new javax.swing.JLabel();
+        LNombre = new javax.swing.JLabel();
+        LApellido = new javax.swing.JLabel();
+        LFechaIngreso = new javax.swing.JLabel();
+        LFechaSalida = new javax.swing.JLabel();
+        LHabitaciones = new javax.swing.JLabel();
+        LPersonas = new javax.swing.JLabel();
         nombre = new javax.swing.JTextField();
         apeliido = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        LIdentificacion = new javax.swing.JLabel();
         identificacion = new javax.swing.JTextField();
-        DiaIng = new javax.swing.JComboBox<String>();
-        MesIng = new javax.swing.JComboBox<String>();
-        AnoIng = new javax.swing.JComboBox<String>();
-        DiaSal = new javax.swing.JComboBox<String>();
-        AnoSal = new javax.swing.JComboBox<String>();
-        MesSal = new javax.swing.JComboBox<String>();
+        DiaIngreso = new javax.swing.JComboBox<String>();
+        MesIngreso = new javax.swing.JComboBox<String>();
+        AnoIngreso = new javax.swing.JComboBox<String>();
+        DiaSalida = new javax.swing.JComboBox<String>();
+        AnoSalida  = new javax.swing.JComboBox<String>();
+        MesSalida = new javax.swing.JComboBox<String>();
         Haita = new javax.swing.JComboBox<String>();
         person = new javax.swing.JComboBox<String>();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -88,13 +88,13 @@ public class jose extends javax.swing.JFrame {
         porfin = new javax.swing.JButton();
         diaedi = new javax.swing.JTextField();
         MesEdi = new javax.swing.JTextField();
-        DiaF = new javax.swing.JTextField();
-        mesF = new javax.swing.JTextField();
+        DiaFin = new javax.swing.JTextField();
+        mesFin = new javax.swing.JTextField();
         Hb = new javax.swing.JTextField();
         Pb = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        NumHab = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        LHabitacionEditar = new javax.swing.JLabel();
+        NumeroHabitacion = new javax.swing.JTextField();
+        LNumeroHabitacion = new javax.swing.JLabel();
         totall = new javax.swing.JLabel();
         niNo1 = new javax.swing.JLabel();
         niNos = new javax.swing.JTextField();
@@ -103,20 +103,20 @@ public class jose extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 102));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel1.setText("Ingrese los siguientes datos para su reservacion:");
+        LDatos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        LDatos.setText("Ingrese los siguientes datos para su reservacion:");
 
-        jLabel2.setText("Nombre");
+        LNombre.setText("Nombre");
 
-        jLabel3.setText("Apellido");
+        LApellido.setText("Apellido");
 
-        jLabel4.setText("Fecha de ingreso");
+        LFechaIngreso.setText("Fecha de ingreso");
 
-        jLabel5.setText("Fecha de salida");
+        LFechaSalida.setText("Fecha de salida");
 
-        jLabel6.setText("Habitaciones");
+        LHabitaciones.setText("Habitaciones");
 
-        jLabel7.setText("Personas");
+        LPersonas.setText("Personas");
 
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +130,7 @@ public class jose extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Identificacion");
+        LIdentificacion.setText("Identificacion");
 
         identificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,27 +138,27 @@ public class jose extends javax.swing.JFrame {
             }
         });
 
-        DiaIng.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        DiaIng.addActionListener(new java.awt.event.ActionListener() {
+        DiaIngreso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        DiaIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DiaIngActionPerformed(evt);
             }
         });
 
-        MesIng.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mes", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" }));
+        MesIngreso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mes", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" }));
 
-        AnoIng.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Año", "2019", "2020", "2021" }));
+        AnoIngreso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Año", "2019", "2020", "2021" }));
 
-        DiaSal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        DiaSal.addActionListener(new java.awt.event.ActionListener() {
+        DiaSalida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        DiaSalida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DiaSalActionPerformed(evt);
             }
         });
 
-        AnoSal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Año", "2019", "2020", "2021" }));
+        AnoSalida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Año", "2019", "2020", "2021" }));
 
-        MesSal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mes", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" }));
+        MesSalida.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Mes", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" }));
 
         Haita.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5" }));
         Haita.addActionListener(new java.awt.event.ActionListener() {
@@ -248,11 +248,11 @@ public class jose extends javax.swing.JFrame {
         MesEdi.setEditable(false);
         MesEdi.setText("Mes");
 
-        DiaF.setEditable(false);
-        DiaF.setText("Dia");
+        DiaFin.setEditable(false);
+        DiaFin.setText("Dia");
 
-        mesF.setEditable(false);
-        mesF.setText("Mes");
+        mesFin.setEditable(false);
+        mesFin.setText("Mes");
 
         Hb.setEditable(false);
         Hb.setText("Habi");
@@ -260,15 +260,15 @@ public class jose extends javax.swing.JFrame {
         Pb.setEditable(false);
         Pb.setText("Person");
 
-        jLabel9.setText("Habitacion");
+        LHabitacionEditar.setText("Habitacion");
 
-        NumHab.addActionListener(new java.awt.event.ActionListener() {
+        NumeroHabitacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NumHabActionPerformed(evt);
             }
         });
 
-        jLabel10.setText("NumHabi");
+        LNumeroHabitacion.setText("NumHabi");
 
         totall.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         totall.setText("Total Dia");
@@ -307,40 +307,40 @@ public class jose extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel5))
+                                    .addComponent(LNombre)
+                                    .addComponent(LFechaIngreso)
+                                    .addComponent(LApellido)
+                                    .addComponent(LIdentificacion)
+                                    .addComponent(LFechaSalida))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jLabel9)
+                                        .addComponent(LHabitacionEditar)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(NumHab))
+                                        .addComponent(NumeroHabitacion))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(DiaSal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(DiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(MesSal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(MesSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(AnoSal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(AnoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel7))
+                                                .addComponent(LPersonas))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(DiaIng, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(DiaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(MesIng, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(MesIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(AnoIng, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(AnoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(22, 22, 22)
-                                                .addComponent(jLabel6)))
+                                                .addComponent(LHabitaciones)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(Haita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,7 +362,7 @@ public class jose extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
+                            .addComponent(LNumeroHabitacion)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(diaedi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -374,48 +374,48 @@ public class jose extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(ideeeeeee, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(31, 31, 31)
-                                .addComponent(DiaF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(DiaFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mesF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(mesFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(LNombre)
                     .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(niNo1)
                     .addComponent(niNos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(LApellido)
                     .addComponent(apeliido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(LIdentificacion)
                     .addComponent(identificacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NumHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LHabitacionEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NumeroHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(DiaIng, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MesIng, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AnoIng, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LFechaIngreso)
+                    .addComponent(DiaIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MesIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AnoIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LHabitaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Haita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(DiaSal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(MesSal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AnoSal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
+                    .addComponent(LPersonas)
+                    .addComponent(DiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MesSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AnoSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LFechaSalida)
                     .addComponent(person, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -431,7 +431,7 @@ public class jose extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(totall)
                         .addGap(10, 10, 10)))
-                .addComponent(jLabel10)
+                .addComponent(LNumeroHabitacion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(apeeeeeee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -439,8 +439,8 @@ public class jose extends javax.swing.JFrame {
                     .addComponent(ideeeeeee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(diaedi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MesEdi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DiaF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mesF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DiaFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mesFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Hb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -469,32 +469,32 @@ public class jose extends javax.swing.JFrame {
 
     private void BtnReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReservaActionPerformed
         reserva o=new reserva(nombre.getText(),apeliido.getText(),identificacion.getText(),
-                DiaIng.getSelectedItem().toString() ,DiaSal.getSelectedItem().toString(),
+                DiaIngreso.getSelectedItem().toString() ,DiaSalida.getSelectedItem().toString(),
                 person.getSelectedItem().toString(),Haita.getSelectedItem().toString(),
-                MesIng.getSelectedItem().toString(),MesSal.getSelectedItem().toString(),
-                NumHab.getText(), niNos.getText());
+                MesIngreso.getSelectedItem().toString(),MesSalida.getSelectedItem().toString(),
+                NumeroHabitacion.getText(), niNos.getText());
         aa.add(o);
         muestra();
         nombre.setText("");
         apeliido.setText("");
         identificacion.setText("");
-        NumHab.setText("");
+        NumeroHabitacion.setText("");
         niNos.setText("");
         total();
         
     }//GEN-LAST:event_BtnReservaActionPerformed
 
     private void BtnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditarActionPerformed
-        noo.setText(nom);
-        apeeeeeee.setText(ape);
-        ideeeeeee.setText(iden);
+        noo.setText(Nombre);
+        apeeeeeee.setText(Apellido);
+        ideeeeeee.setText(Identificacion);
         diaedi.setText(dia);
         MesEdi.setText(mes);
-        DiaF.setText(diaff);
-        mesF.setText(mesff);
+        DiaFin.setText(diaff);
+        mesFin.setText(mesff);
         Hb.setText(hff);
         Pb.setText(pff);
-        jLabel10.setText(h);
+        LNumeroHabitacion.setText(h);
         niNos.setText(niNo);
     }//GEN-LAST:event_BtnEditarActionPerformed
 
@@ -532,7 +532,7 @@ public class jose extends javax.swing.JFrame {
 
     private void borrarlineaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarlineaActionPerformed
         for(int i=0;i<aa.size();i++){
-            if(nom==aa.get(i).getNombre()){
+            if(Nombre==aa.get(i).getNombre()){
                 aa.remove(i);
             }
         }
@@ -575,14 +575,14 @@ public class jose extends javax.swing.JFrame {
         
         for(int i=0;i<aa.size();i++){
             
-            if(jLabel10.getText()==aa.get(i).getNum()){
+            if(LNumeroHabitacion.getText()==aa.get(i).getNum()){
                 aa.get(i).setNombre(noo.getText());
                 aa.get(i).setApellido(apeeeeeee.getText());
                 aa.get(i).setIdetificacion(ideeeeeee.getText());
                 aa.get(i).setIngreso(diaedi.getText());
                 aa.get(i).setMes1(MesEdi.getText());
-                aa.get(i).setFin(DiaF.getText());
-                aa.get(i).setMes2(mesF.getText());
+                aa.get(i).setFin(DiaFin.getText());
+                aa.get(i).setMes2(mesFin.getText());
                 aa.get(i).setHabi(Hb.getText());
                 aa.get(i).setPerso(Pb.getText());
                 aa.get(i).setNiNo(niNos.getText());
@@ -595,11 +595,11 @@ public class jose extends javax.swing.JFrame {
         ideeeeeee.setText("");
         diaedi.setText("Dia");
         MesEdi.setText("Mes");
-        DiaF.setText("Dia");
-        mesF.setText("Mes");
+        DiaFin.setText("Dia");
+        mesFin.setText("Mes");
         Hb.setText("habi");
         Pb.setText("person");
-        jLabel10.setText("NumHabi");
+        LNumeroHabitacion.setText("NumHabi");
         niNos.setText("");
         
         String jj[][]=new String [aa.size()][10];
@@ -702,20 +702,20 @@ public class jose extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> AnoIng;
-    private javax.swing.JComboBox<String> AnoSal;
+    private javax.swing.JComboBox<String> AnoIngreso;
+    private javax.swing.JComboBox<String> AnoSalida;
     private javax.swing.JButton BtnEditar;
     private javax.swing.JButton BtnReserva;
     private javax.swing.JButton BtnSalir;
-    private javax.swing.JTextField DiaF;
-    private javax.swing.JComboBox<String> DiaIng;
-    private javax.swing.JComboBox<String> DiaSal;
+    private javax.swing.JTextField DiaFin;
+    private javax.swing.JComboBox<String> DiaIngreso;
+    private javax.swing.JComboBox<String> DiaSalida;
     private javax.swing.JComboBox<String> Haita;
     private javax.swing.JTextField Hb;
     private javax.swing.JTextField MesEdi;
-    private javax.swing.JComboBox<String> MesIng;
-    private javax.swing.JComboBox<String> MesSal;
-    private javax.swing.JTextField NumHab;
+    private javax.swing.JComboBox<String> MesIngreso;
+    private javax.swing.JComboBox<String> MesSalida;
+    private javax.swing.JTextField NumeroHabitacion;
     private javax.swing.JTextField Pb;
     private javax.swing.JTextField apeeeeeee;
     private javax.swing.JTextField apeliido;
@@ -723,20 +723,20 @@ public class jose extends javax.swing.JFrame {
     private javax.swing.JTextField diaedi;
     private javax.swing.JTextField ideeeeeee;
     private javax.swing.JTextField identificacion;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel LDatos;
+    private javax.swing.JLabel LNumeroHabitacion;
+    private javax.swing.JLabel LNombre;
+    private javax.swing.JLabel LApellido;
+    private javax.swing.JLabel LFechaIngreso;
+    private javax.swing.JLabel LFechaSalida;
+    private javax.swing.JLabel LHabitaciones;
+    private javax.swing.JLabel LPersonas;
+    private javax.swing.JLabel LIdentificacion;
+    private javax.swing.JLabel LHabitacionEditar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField mesF;
+    private javax.swing.JTextField mesFin;
     private javax.swing.JLabel niNo1;
     private javax.swing.JTextField niNos;
     private javax.swing.JTextField nombre;
