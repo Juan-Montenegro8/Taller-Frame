@@ -26,7 +26,6 @@ public class jose extends javax.swing.JFrame {
     public jose() {
         initComponents();
         jTable1.addMouseListener(new MouseAdapter(){
-            DefaultTableModel m=new DefaultTableModel();
             
             public void mouseClicked(MouseEvent e){
                 int i = jTable1.getSelectedRow();
