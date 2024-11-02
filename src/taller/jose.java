@@ -545,9 +545,9 @@ public class jose extends javax.swing.JFrame {
             matriz[i][4]=Arrayreserva.get(i).getMes1();
             matriz[i][5]=Arrayreserva.get(i).getFin();
             matriz[i][6]=Arrayreserva.get(i).getMes2();
-            matriz[i][7]=Arrayreserva.get(i).getHabi();
-            matriz[i][8]=Arrayreserva.get(i).getPerso();
-            matriz[i][9]=Arrayreserva.get(i).getNum();
+            matriz[i][7]=Arrayreserva.get(i).getHabitacion();
+            matriz[i][8]=Arrayreserva.get(i).getPersona();
+            matriz[i][9]=Arrayreserva.get(i).getNumero();
             matriz[i][10]=Arrayreserva.get(i).getNiNo();
             }
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -574,7 +574,7 @@ public class jose extends javax.swing.JFrame {
         
         for(int i=0;i<Arrayreserva.size();i++){
             
-            if(LNumeroHabitacion.getText()==Arrayreserva.get(i).getNum()){
+            if(LNumeroHabitacion.getText()==Arrayreserva.get(i).getNumero()){
                 Arrayreserva.get(i).setNombre(noo.getText());
                 Arrayreserva.get(i).setApellido(apeeeeeee.getText());
                 Arrayreserva.get(i).setIdetificacion(ideeeeeee.getText());
@@ -582,8 +582,8 @@ public class jose extends javax.swing.JFrame {
                 Arrayreserva.get(i).setMes1(MesEdi.getText());
                 Arrayreserva.get(i).setFin(DiaFin.getText());
                 Arrayreserva.get(i).setMes2(mesFin.getText());
-                Arrayreserva.get(i).setHabi(Hb.getText());
-                Arrayreserva.get(i).setPerso(Pb.getText());
+                Arrayreserva.get(i).setHabitacion(Hb.getText());
+                Arrayreserva.get(i).setPersona(Pb.getText());
                 Arrayreserva.get(i).setNiNo(niNos.getText());
             }
             
@@ -611,9 +611,9 @@ public class jose extends javax.swing.JFrame {
             matriz[i][4]=Arrayreserva.get(i).getMes1();
             matriz[i][5]=Arrayreserva.get(i).getFin();
             matriz[i][6]=Arrayreserva.get(i).getMes2();
-            matriz[i][7]=Arrayreserva.get(i).getHabi();
-            matriz[i][8]=Arrayreserva.get(i).getPerso();
-            matriz[i][9]=Arrayreserva.get(i).getNum();
+            matriz[i][7]=Arrayreserva.get(i).getHabitacion();
+            matriz[i][8]=Arrayreserva.get(i).getPersona();
+            matriz[i][9]=Arrayreserva.get(i).getNumero();
             matriz[i][10]=Arrayreserva.get(i).getNiNo();
             }
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -643,9 +643,9 @@ public class jose extends javax.swing.JFrame {
             matriz[i][4]=Arrayreserva.get(i).getMes1();
             matriz[i][5]=Arrayreserva.get(i).getFin();
             matriz[i][6]=Arrayreserva.get(i).getMes2();
-            matriz[i][7]=Arrayreserva.get(i).getHabi();
-            matriz[i][8]=Arrayreserva.get(i).getPerso();
-            matriz[i][9]=Arrayreserva.get(i).getNum();
+            matriz[i][7]=Arrayreserva.get(i).getHabitacion();
+            matriz[i][8]=Arrayreserva.get(i).getPersona();
+            matriz[i][9]=Arrayreserva.get(i).getNumero();
             matriz[i][10]=Arrayreserva.get(i).getNiNo();
             }
         

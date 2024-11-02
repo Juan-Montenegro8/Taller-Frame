@@ -2,20 +2,20 @@ package taller;
 
 public class reserva {
     String nombre,apellido,idetificacion,ingreso,fin, niNo;
-    String perso,habi,mes1,mes2,num;
+    String persona,habitacion,mes1,mes2,numero;
 
     public reserva(String nombre, String apellido, String idetificacion, String ingreso, 
-            String fin, String perso, String habi,String mes1,String mes2,String num, String niNo) {
+            String fin, String persona, String habitacion,String mes1,String mes2,String numero, String niNo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.idetificacion = idetificacion;
         this.ingreso = ingreso;
         this.fin = fin;
-        this.perso = perso;
-        this.habi = habi;
+        this.persona = persona;
+        this.habitacion = habitacion;
         this.mes1=mes1;
         this.mes2=mes2;
-        this.num=num;
+        this.numero=numero;
         this.niNo=niNo;
     }
 
@@ -27,12 +27,12 @@ public class reserva {
         this.niNo = niNo;
     }
 
-    public String getNum() {
-        return num;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setNum(String num) {
-        this.num = num;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 
     public String getNombre() {
@@ -75,20 +75,20 @@ public class reserva {
         this.fin = fin;
     }
 
-    public String getPerso() {
-        return perso;
+    public String getPersona() {
+        return persona;
     }
 
-    public void setPerso(String perso) {
-        this.perso = perso;
+    public void setPersona(String persona) {
+        this.persona = persona;
     }
 
-    public String getHabi() {
-        return habi;
+    public String getHabitacion() {
+        return habitacion;
     }
 
-    public void setHabi(String habi) {
-        this.habi = habi;
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
     }
 
     public String getMes1() {
